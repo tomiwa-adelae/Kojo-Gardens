@@ -3,17 +3,14 @@
 		&,
 		.container {
 			.links {
-				// background-color: red;
 				position: fixed;
 				top: 70px;
 				left: -100%;
 				width: 100%;
 				height: 100vh;
-				background-color: rgba($white-color, 0.7);
+				background-color: $white-color;
 				z-index: 3;
 				ul {
-					// background-color: red;
-					display: flex;
 					align-items: flex-start;
 					flex-direction: column;
 					width: 85%;
@@ -24,14 +21,12 @@
 						display: block;
 						width: 100%;
 						padding: 0.5rem 1rem;
-						// background-color: grey;
+						background-color: $grey-color;
+						@include easeOut();
 
-						li {
-							font-weight: bold;
-							@include easeOut();
-						}
 						&:hover {
 							color: $primary-color;
+							background-color: darken($grey-color, $darken);
 						}
 					}
 				}

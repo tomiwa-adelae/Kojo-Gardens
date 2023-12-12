@@ -27,24 +27,74 @@ li {
 
 h1 {
 	font-size: 3rem;
+	font-weight: lighter;
 }
 
 h2 {
 	font-size: 2.5rem;
+	font-weight: lighter;
 }
 
 h3 {
 	font-size: 2rem;
+	font-weight: lighter;
 }
 
 h4 {
 	font-size: 1.5rem;
+	font-weight: lighter;
 }
 
 h5 {
 	font-size: 1.25rem;
+	font-weight: lighter;
 }
 
 h6 {
 	font-size: 1rem;
+	font-weight: lighter;
+}
+
+.text-primary {
+	color: $primary-color;
+}
+
+.text-secondary {
+	color: $secondary-color;
+}
+
+.line-white,
+.line-primary {
+	background-color: $white-color;
+	padding: 0.1rem 0;
+	width: 60%;
+	margin: 0 auto;
+	border-radius: $radius;
+	// height: 3px;
+}
+
+.line-primary {
+	background-color: $primary-color;
+}
+
+.btn {
+	font-family: "__Oldenburg_709b3f", "__Oldenburg_Fallback_709b3f";
+	letter-spacing: 2px;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	border-radius: $radius;
+	cursor: pointer;
+	@include easeOut();
+
+	&-secondary {
+		background-color: $secondary-color;
+		color: $white-color;
+
+		&:hover {
+			background-color: darken($secondary-color, $darken);
+		}
+	}
 }

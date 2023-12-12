@@ -17,14 +17,23 @@ const Header = () => {
 				</div>
 				<nav className={openNav ? "links open" : "links"}>
 					<ul>
-						<Link href="/gallery">
-							<li>Gallery</li>
-						</Link>
-						<Link href="/about">
+						<Link
+							onClick={() => setOpenNav(!openNav)}
+							href="/about"
+						>
 							<li>About us</li>
 						</Link>
-						<Link href="/contact">
+						<Link
+							onClick={() => setOpenNav(!openNav)}
+							href="/contact"
+						>
 							<li>Contact us</li>
+						</Link>
+						<Link
+							onClick={() => setOpenNav(!openNav)}
+							href="/gallery"
+						>
+							<li>Our Gallery</li>
 						</Link>
 					</ul>
 				</nav>
