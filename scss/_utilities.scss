@@ -97,4 +97,13 @@ h6 {
 			background-color: darken($secondary-color, $darken);
 		}
 	}
+
+	&-primary {
+		background-color: $primary-color;
+		color: $white-color;
+
+		&:hover {
+			background-color: darken($primary-color, $darken);
+		}
+	}
 }

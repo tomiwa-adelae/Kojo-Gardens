@@ -1,5 +1,6 @@
 import AboutUs from "./home/AboutUs";
 import MakeReservation from "./home/MakeReservation";
+import OurFoods from "./home/OurFoods";
 import Showcase from "./home/Showcase";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
 			<Showcase />
 			<MakeReservation />
 			<AboutUs />
+			<OurFoods />
 		</div>
 	);
 }

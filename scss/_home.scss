@@ -1,5 +1,5 @@
 .home-page {
-	min-height: 300vh;
+	min-height: 1000vh;
 
 	.showcase {
 		margin-bottom: 0;
@@ -92,11 +92,106 @@
 		}
 
 		#btn {
-			// display: flex;
-			// align-items: center;
-			// justify-content: center;
 			text-align: center;
 			margin: 3rem 0 1rem 0;
+		}
+	}
+
+	.about-us {
+		background-color: $white-color;
+		color: $secondary-color;
+		padding: 4rem 0 5rem 0;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		.content {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-top: 4rem;
+
+			.img {
+				flex: 1.5;
+			}
+
+			.about {
+				flex: 2;
+
+				h6 {
+					text-transform: uppercase;
+					color: $primary-color;
+				}
+
+				h5 {
+					text-transform: uppercase;
+					margin: 1rem 0;
+				}
+
+				.btn {
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+
+	.our-foods {
+		background-color: $grey-color;
+		// background-color: grey;
+		color: $secondary-color;
+		padding: 4rem 0 5rem 0;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		.food-images {
+			margin-top: 4rem;
+			display: grid;
+			grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(
+					200px,
+					1fr
+				);
+			grid-gap: 1rem;
+
+			.image {
+				height: 350px;
+				position: relative;
+				@include easeOut();
+				img {
+					height: 100%;
+					object-fit: cover;
+				}
+
+				h6 {
+					text-transform: uppercase;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background-color: rgba($secondary-color, 0.6);
+					color: $white-color;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					opacity: 0;
+					@include easeOut();
+				}
+
+				&:hover {
+					h6 {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const AboutUs = () => {
@@ -42,6 +43,11 @@ const AboutUs = () => {
 							pristine coastline to guided tours exploring the
 							rich cultural heritage of the region.
 						</p>
+						<Link href="/about">
+							<button href="/about" className="btn btn-primary">
+								learn more
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
