@@ -7,6 +7,24 @@ a {
 	color: $black-color;
 }
 
+li {
+	list-style: none;
+}
+
+.container {
+	width: 85%;
+	max-width: 1224px;
+	margin: auto;
+}
+
+@mixin borderBottom {
+	border-bottom: 3px solid $primary-color;
+}
+
+@mixin easeOut {
+	transition: 0.5s all ease-out;
+}
+
 h1 {
 	font-size: 3rem;
 }

@@ -14,9 +14,76 @@ body {
 	width: 100%;
 	height: 100%;
 	font-size: 15px;
+	position: relative;
+	margin-top: 70px;
 }
 
 header {
-	// background-color: $white-color;
-	// background-color: aqua;
+	background-color: $white-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 70px;
+	width: 100%;
+	@include borderBottom();
+
+	&,
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.logo {
+			h3 {
+				color: $primary-color;
+				@include easeOut();
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+
+		.links {
+			// background-color: red;
+			ul {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+
+				a {
+					padding: 0.5rem 1rem;
+
+					li {
+						font-weight: bold;
+						@include easeOut();
+					}
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+
+		.burger {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: none;
+			svg {
+				@include easeOut();
+				cursor: pointer;
+				color: $primary-color;
+			}
+
+			&:hover {
+				svg {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
 }
+
+@import "mobile";
