@@ -1,6 +1,4 @@
 .home-page {
-	min-height: 1000vh;
-
 	.showcase {
 		margin-bottom: 0;
 		img {
@@ -189,6 +187,122 @@
 					h6 {
 						opacity: 1;
 					}
+				}
+			}
+		}
+	}
+
+	.our-gallery {
+		background-color: $white-color;
+		color: $secondary-color;
+		padding: 4rem 0 5rem 0;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		.mySwiper {
+			margin-top: 4rem;
+
+			.image {
+				cursor: grab;
+				background-color: coral;
+				margin: 0 2rem;
+				position: relative;
+				img {
+					height: 350px;
+					object-fit: cover;
+				}
+
+				h6 {
+					text-transform: uppercase;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background-color: rgba($secondary-color, 0.6);
+					color: $white-color;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					opacity: 0;
+					@include easeOut();
+				}
+				&:hover {
+					h6 {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.contact-us {
+		background-color: $grey-color;
+		color: $secondary-color;
+		padding: 4rem 0 5rem 0;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		.cards {
+			// background-color: coral;
+			display: flex;
+			align-items: safe center;
+			justify-content: space-between;
+			gap: 3rem;
+			margin-top: 4rem;
+
+			.info {
+				flex: 1;
+				padding: 3rem;
+				background-color: $white-color;
+				border-radius: $radius;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+				h5 {
+					color: $primary-color;
+					text-transform: uppercase;
+					text-align: center;
+				}
+
+				.details {
+					div {
+						margin: 3rem 0;
+						h6 {
+							text-transform: uppercase;
+						}
+
+						p {
+							font-size: 14px;
+							margin: 0.5rem 0;
+						}
+					}
+				}
+			}
+
+			.form {
+				flex: 2;
+				padding: 3rem;
+				background-color: $white-color;
+				border-radius: $radius;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+				h5 {
+					color: $primary-color;
+					text-transform: uppercase;
+					text-align: center;
+				}
+
+				form {
+					margin: 3rem 0 0 0;
 				}
 			}
 		}

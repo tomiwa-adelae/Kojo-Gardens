@@ -20,7 +20,7 @@ const OurFoods = () => {
 
 				<div className="food-images">
 					{foods.map((food) => (
-						<Food food={food} />
+						<Food key={food.id} food={food} />
 					))}
 				</div>
 			</div>

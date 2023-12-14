@@ -169,26 +169,14 @@ h6 {
 		0% {
 			-webkit-transform: scale(0);
 		}
-		50% {
-			-webkit-transform: scale(0.5);
-		}
 		100% {
 			-webkit-transform: scale(1);
 		}
-		// from {
-		// 	-webkit-transform: scale(0);
-		// }
-		// to {
-		// 	-webkit-transform: scale(1);
-		// }
 	}
 
 	@keyframes zoom {
 		0% {
 			-webkit-transform: scale(0);
-		}
-		50% {
-			-webkit-transform: scale(0.5);
 		}
 		100% {
 			-webkit-transform: scale(1);
@@ -214,6 +202,66 @@ h6 {
 	@media only screen and (max-width: 700px) {
 		.modal-content {
 			width: 100%;
+		}
+	}
+}
+
+form {
+	div {
+		margin: 1rem 0;
+		input,
+		textarea {
+			font-family: "__Oldenburg_709b3f", "__Oldenburg_Fallback_709b3f";
+			padding: 1rem;
+			background: transparent;
+			border: 1px solid $secondary-color;
+			border-radius: $radius;
+			width: 100%;
+			outline-color: $primary-color;
+		}
+	}
+}
+
+.up-icon {
+	background-color: $secondary-color;
+	padding: 1rem;
+	border-radius: $radius;
+	margin-top: 3rem;
+	width: 3rem;
+	position: fixed;
+	bottom: 3%;
+	right: 2%;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	cursor: pointer;
+	@include easeOut();
+
+	svg {
+		color: $white-color;
+		animation: move 3s infinite;
+		@include easeOut();
+	}
+
+	@keyframes move {
+		0% {
+			transform: translateY(0%);
+		}
+		50% {
+			transform: translateY(40%);
+		}
+		100% {
+			transform: translateY(0%);
+		}
+	}
+
+	&:hover {
+		background-color: darken($secondary-color, $darken);
+
+		i {
+			color: $white-color;
 		}
 	}
 }

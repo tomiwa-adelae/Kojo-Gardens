@@ -1,6 +1,8 @@
 import { Oldenburg } from "next/font/google";
 import "../styles/styles.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import UpIcon from "@/components/UpIcon";
 
 const oldenburg = Oldenburg({ weight: ["400"], subsets: ["latin"] });
 
@@ -15,6 +17,8 @@ export default function RootLayout({ children }) {
 			<body className={oldenburg.className}>
 				<Header />
 				{children}
+				<UpIcon />
+				<Footer />
 			</body>
 		</html>
 	);
