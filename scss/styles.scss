@@ -3,6 +3,8 @@
 @import "home";
 @import "about";
 @import "contact";
+@import "gallery";
+@import "reservations";
 
 * {
 	margin: 0;
@@ -29,7 +31,7 @@ header {
 	left: 0;
 	height: 70px;
 	width: 100%;
-	z-index: 7;
+	z-index: 5;
 	@include borderBottom();
 
 	&,
