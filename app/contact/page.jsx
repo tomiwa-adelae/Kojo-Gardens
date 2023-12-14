@@ -1,9 +1,12 @@
 import React from "react";
+import Showcase from "./Showcase";
+import Content from "./Content";
 
 const page = () => {
 	return (
-		<div>
-			<h1>CONTACT US</h1>
+		<div className="contact-page">
+			<Showcase />
+			<Content />
 		</div>
 	);
 };
