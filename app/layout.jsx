@@ -3,6 +3,7 @@ import "../styles/styles.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import UpIcon from "@/components/UpIcon";
+require("dotenv").config();
 
 const oldenburg = Oldenburg({ weight: ["400"], subsets: ["latin"] });
 

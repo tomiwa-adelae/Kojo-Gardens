@@ -15,19 +15,7 @@ const MakeReservation = () => {
 		(date.getDate() + 1);
 	const [arrivalDate, setArrivalDate] = useState(today);
 	const [departureDate, setDepartureDate] = useState(tomorrow);
-	const [nofGuest, setNoOfGuest] = useState(1);
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-
-		const reservation = {
-			arrivalDate,
-			departureDate,
-			nofGuest,
-		};
-
-		console.log(reservation);
-	};
+	const [noOfGuest, setNoOfGuest] = useState(1);
 
 	return (
 		<div className="make-reservation">
@@ -61,7 +49,7 @@ const MakeReservation = () => {
 					<div>
 						<h6>Number of Guest</h6>
 						<select
-							value={nofGuest}
+							value={noOfGuest}
 							onChange={(e) => setNoOfGuest(e.target.value)}
 							name="guest"
 							id="guest"
@@ -78,7 +66,7 @@ const MakeReservation = () => {
 					<Link
 						href={{
 							pathname: "/reservations",
-							query: { arrivalDate, departureDate, nofGuest },
+							query: { arrivalDate, departureDate, noOfGuest },
 						}}
 					>
 						<button

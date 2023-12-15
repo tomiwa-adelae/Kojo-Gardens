@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Content = () => {
+	// const [first, setfirst] = useState(second)
+
 	return (
 		<div className="content">
 			<div className="container">

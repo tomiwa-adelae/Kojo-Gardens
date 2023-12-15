@@ -33,7 +33,7 @@
 	}
 
 	.content {
-		background-color: $white-color;
+		background-color: $grey-color;
 		color: $secondary-color;
 		padding: 4rem 0 5rem 0;
 
@@ -93,6 +93,45 @@
 
 				form {
 					margin: 3rem 0 0 0;
+
+					::-webkit-calendar-picker-indicator {
+						background-color: $white-color;
+						padding: 0.5rem;
+						cursor: pointer;
+						border-radius: $radius;
+						@include easeOut();
+
+						&:hover {
+							background-color: $primary-color;
+						}
+					}
+
+					select {
+						background-color: transparent;
+						padding: 15px;
+						font-family: "__Oldenburg_709b3f",
+							"__Oldenburg_Fallback_709b3f";
+						color: $secondary-color;
+						cursor: pointer;
+						font-size: 1.25rem;
+						border: 1px solid $secondary-color;
+						outline-color: $primary-color;
+						width: 100%;
+						text-align: center;
+						outline: none;
+						border-radius: $radius;
+						@include easeOut();
+
+						option {
+							color: $primary-color;
+							background-color: $white-color;
+						}
+
+						&:hover {
+							background-color: darken($primary-color, $darken);
+							color: $white-color;
+						}
+					}
 				}
 			}
 		}

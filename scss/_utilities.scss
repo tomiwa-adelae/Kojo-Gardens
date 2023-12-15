@@ -12,7 +12,7 @@ li {
 }
 
 .container {
-	width: 85%;
+	width: 90%;
 	max-width: 1224px;
 	margin: auto;
 }
@@ -210,6 +210,11 @@ h6 {
 form {
 	div {
 		margin: 1rem 0;
+		label {
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			font-family: "__Oldenburg_709b3f", "__Oldenburg_Fallback_709b3f";
+		}
 		input,
 		textarea {
 			font-family: "__Oldenburg_709b3f", "__Oldenburg_Fallback_709b3f";

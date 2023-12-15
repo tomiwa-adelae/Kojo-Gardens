@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "__Oldenburg_709b3f", "__Oldenburg_Fallback_709b3f";
 }
 
 body {
@@ -67,7 +68,6 @@ header {
 					}
 					&:hover {
 						color: $primary-color;
-						font-weight: bold;
 					}
 				}
 			}

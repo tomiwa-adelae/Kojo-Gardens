@@ -1,11 +1,29 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LiaBarsSolid } from "react-icons/lia";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
 	const [openNav, setOpenNav] = useState(false);
+
+	useEffect(() => {
+		const keyDownHandler = (event) => {
+			if (openNav && event.key === "Escape") {
+				event.preventDefault();
+
+				// 👇️ your logic here
+				setOpenNav(!openNav);
+			}
+		};
+
+		document.addEventListener("keydown", keyDownHandler);
+
+		// 👇️ clean up event listener
+		return () => {
+			document.removeEventListener("keydown", keyDownHandler);
+		};
+	}, [openNav]);
 
 	return (
 		<header>
@@ -34,6 +52,12 @@ const Header = () => {
 							href="/gallery"
 						>
 							<li>Our Gallery</li>
+						</Link>
+						<Link
+							onClick={() => setOpenNav(!openNav)}
+							href="/reservations"
+						>
+							<li>Make Reservations</li>
 						</Link>
 					</ul>
 				</nav>

@@ -6,7 +6,7 @@ const Content = ({ searchParams }) => {
 	const [message, setMessage] = useState("");
 	const [arrival, setArrival] = useState("");
 	const [departure, setDeparture] = useState("");
-	const [guest, setGuest] = useState("");
+	const [guest, setGuest] = useState();
 
 	useEffect(() => {
 		const { arrivalDate, departureDate, noOfGuest } = searchParams;
@@ -74,6 +74,9 @@ const Content = ({ searchParams }) => {
 									/>
 								</div>
 								<div>
+									<label htmlFor="arrival">
+										Arrival Date
+									</label>
 									<input
 										type="date"
 										value={arrival}
@@ -81,10 +84,13 @@ const Content = ({ searchParams }) => {
 											setArrival(e.target.value)
 										}
 										name="arrival"
-										id=""
+										id="arrival"
 									/>
 								</div>
 								<div>
+									<label htmlFor="departure">
+										Departure Date
+									</label>
 									<input
 										type="date"
 										value={departure}
@@ -92,10 +98,13 @@ const Content = ({ searchParams }) => {
 											setDeparture(e.target.value)
 										}
 										name="departure"
-										id=""
+										id="departure"
 									/>
 								</div>
 								<div>
+									<label htmlFor="guest">
+										Number of Guest
+									</label>
 									<select
 										value={guest}
 										onChange={(e) =>
