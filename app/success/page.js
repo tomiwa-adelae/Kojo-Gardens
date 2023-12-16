@@ -1,12 +1,12 @@
-"use client";
+import React from "react";
 import Showcase from "./Showcase";
 import Content from "./Content";
 
-const page = ({ searchParams }) => {
+const page = () => {
 	return (
-		<div className="reservations-page">
+		<div className="success-page">
 			<Showcase />
-			<Content searchParams={searchParams} />
+			<Content />
 		</div>
 	);
 };

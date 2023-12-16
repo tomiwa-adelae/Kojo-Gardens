@@ -1,8 +1,38 @@
 "use client";
+import axios from "axios";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Content = () => {
-	// const [first, setfirst] = useState(second)
+	const router = useRouter();
+
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		const content = {
+			name,
+			email,
+			message,
+		};
+
+		const config = {
+			headers: {
+				"Content-type": "application/json",
+			},
+		};
+
+		try {
+			await axios.post("http://localhost:5000/contact", content, config);
+
+			router.push("/success");
+		} catch (err) {
+			router.push("/error?q=contact");
+		}
+	};
 
 	return (
 		<div className="content">
@@ -16,17 +46,27 @@ const Content = () => {
 					<div className="card form">
 						<h5>Get in touch</h5>
 						<div className="details">
-							<form>
-								<div>
-									<input
-										type="text"
-										placeholder="Enter your email address"
-									/>
-								</div>
+							<form onSubmit={handleSubmit}>
 								<div>
 									<input
 										type="text"
 										placeholder="Enter your name"
+										value={name}
+										required
+										onChange={(e) =>
+											setName(e.target.value)
+										}
+									/>
+								</div>
+								<div>
+									<input
+										type="email"
+										placeholder="Enter your email address"
+										value={email}
+										required
+										onChange={(e) =>
+											setEmail(e.target.value)
+										}
 									/>
 								</div>
 								<div>
@@ -34,8 +74,13 @@ const Content = () => {
 										placeholder="Enter your message"
 										name=""
 										id=""
+										required
 										cols="30"
 										rows="10"
+										value={message}
+										onChange={(e) =>
+											setMessage(e.target.value)
+										}
 									></textarea>
 								</div>
 								<div>

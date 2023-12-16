@@ -1,6 +1,10 @@
+import axios from "axios";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Content = ({ searchParams }) => {
+	const router = useRouter();
+
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -14,6 +18,37 @@ const Content = ({ searchParams }) => {
 		setDeparture(departureDate);
 		setGuest(noOfGuest);
 	}, [searchParams]);
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		const content = {
+			name,
+			email,
+			message,
+			arrival,
+			departure,
+			guest,
+		};
+
+		const config = {
+			headers: {
+				"Content-type": "application/json",
+			},
+		};
+
+		try {
+			await axios.post(
+				"http://localhost:5000/reservations",
+				content,
+				config
+			);
+
+			router.push("/success");
+		} catch (err) {
+			router.push("/error?q=reservations");
+		}
+	};
 
 	return (
 		<div className="content">
@@ -52,7 +87,7 @@ const Content = ({ searchParams }) => {
 					<div className="card form">
 						<h5>Get in touch</h5>
 						<div className="details">
-							<form>
+							<form onSubmit={handleSubmit}>
 								<div>
 									<input
 										type="text"
@@ -61,16 +96,18 @@ const Content = ({ searchParams }) => {
 										onChange={(e) =>
 											setName(e.target.value)
 										}
+										required
 									/>
 								</div>
 								<div>
 									<input
-										type="text"
+										type="email"
 										placeholder="Enter your email address"
 										value={email}
 										onChange={(e) =>
 											setEmail(e.target.value)
 										}
+										required
 									/>
 								</div>
 								<div>
@@ -84,6 +121,7 @@ const Content = ({ searchParams }) => {
 											setArrival(e.target.value)
 										}
 										name="arrival"
+										required
 										id="arrival"
 									/>
 								</div>
@@ -98,6 +136,7 @@ const Content = ({ searchParams }) => {
 											setDeparture(e.target.value)
 										}
 										name="departure"
+										required
 										id="departure"
 									/>
 								</div>
@@ -111,6 +150,7 @@ const Content = ({ searchParams }) => {
 											setGuest(e.target.value)
 										}
 										name="guest"
+										required
 										id="guest"
 									>
 										<option value="1">1</option>
