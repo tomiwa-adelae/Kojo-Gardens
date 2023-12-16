@@ -10,13 +10,16 @@ const Content = ({ searchParams }) => {
 	const [message, setMessage] = useState("");
 	const [arrival, setArrival] = useState("");
 	const [departure, setDeparture] = useState("");
-	const [guest, setGuest] = useState();
+	const [guest, setGuest] = useState("");
 
 	useEffect(() => {
 		const { arrivalDate, departureDate, noOfGuest } = searchParams;
-		setArrival(arrivalDate);
-		setDeparture(departureDate);
-		setGuest(noOfGuest);
+
+		if (searchParams.arrivalDate) {
+			setArrival(arrivalDate);
+			setDeparture(departureDate);
+			setGuest(noOfGuest);
+		}
 	}, [searchParams]);
 
 	const handleSubmit = async (e) => {
@@ -46,6 +49,7 @@ const Content = ({ searchParams }) => {
 
 			router.push("/success");
 		} catch (err) {
+			console.log(err);
 			router.push("/error?q=reservations");
 		}
 	};
