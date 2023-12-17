@@ -25,6 +25,21 @@ li {
 	transition: 0.5s all ease-out;
 }
 
+.loading {
+	// margin-right: 7px;
+	// top: 2px;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+	from {
+		transform: scale(1) rotate(0deg);
+	}
+	to {
+		transform: scale(1) rotate(360deg);
+	}
+}
+
 h1 {
 	font-size: 3.5rem;
 	font-weight: lighter;

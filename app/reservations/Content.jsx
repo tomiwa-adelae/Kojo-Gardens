@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Content = ({ searchParams }) => {
 	const router = useRouter();
@@ -11,6 +12,7 @@ const Content = ({ searchParams }) => {
 	const [arrival, setArrival] = useState("");
 	const [departure, setDeparture] = useState("");
 	const [guest, setGuest] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		const { arrivalDate, departureDate, noOfGuest } = searchParams;
@@ -24,6 +26,8 @@ const Content = ({ searchParams }) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		setLoading(true);
 
 		const content = {
 			name,
@@ -48,9 +52,10 @@ const Content = ({ searchParams }) => {
 			);
 
 			router.push("/success");
+			setLoading(false);
 		} catch (err) {
-			console.log(err);
 			router.push("/error?q=reservations");
+			setLoading(false);
 		}
 	};
 
@@ -179,7 +184,11 @@ const Content = ({ searchParams }) => {
 								</div>
 								<div>
 									<button className="btn btn-primary">
-										Send Message
+										{loading ? (
+											<AiOutlineLoading3Quarters className="loading" />
+										) : (
+											"Send Message"
+										)}
 									</button>
 								</div>
 							</form>

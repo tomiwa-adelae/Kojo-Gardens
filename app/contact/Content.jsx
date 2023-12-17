@@ -2,6 +2,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Content = () => {
 	const router = useRouter();
@@ -9,9 +10,12 @@ const Content = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		setLoading(true);
 
 		const content = {
 			name,
@@ -29,8 +33,10 @@ const Content = () => {
 			await axios.post("http://localhost:5000/contact", content, config);
 
 			router.push("/success");
+			setLoading(false);
 		} catch (err) {
 			router.push("/error?q=contact");
+			setLoading(false);
 		}
 	};
 
@@ -85,7 +91,11 @@ const Content = () => {
 								</div>
 								<div>
 									<button className="btn btn-primary">
-										Send Message
+										{loading ? (
+											<AiOutlineLoading3Quarters className="loading" />
+										) : (
+											"Send Message"
+										)}
 									</button>
 								</div>
 							</form>
