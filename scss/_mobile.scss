@@ -1,4 +1,34 @@
+@media (max-width: 1080px) {
+	.container {
+		width: 95%;
+	}
+}
+
 @media (max-width: 880px) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.8rem;
+	}
+
 	header {
 		&,
 		.container {
@@ -38,6 +68,463 @@
 
 			.burger {
 				display: block;
+			}
+		}
+	}
+
+	.home-page {
+		.showcase {
+			img {
+				height: 60vh;
+			}
+		}
+
+		.make-reservation {
+			.boxes {
+				div {
+					h6 {
+						font-size: 0.7rem;
+					}
+
+					input[type="date"] {
+						font-size: 1rem;
+					}
+
+					select {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+
+		.about-us {
+			.content {
+				flex-direction: column;
+
+				.img {
+					width: 100%;
+					img {
+						height: 350px;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+
+		.our-foods {
+			.food-images {
+				.image {
+					height: 250px;
+				}
+			}
+		}
+
+		.our-gallery {
+			.mySwiper {
+				.image {
+					margin: 0 0.5rem;
+					img {
+						height: 250px;
+					}
+				}
+			}
+		}
+
+		.contact-us {
+			.cards {
+				flex-direction: column;
+
+				.info {
+					width: 100%;
+				}
+
+				.form {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.contact-page {
+		.content {
+			.cards {
+				flex-direction: column;
+
+				.info {
+					width: 100%;
+				}
+
+				.form {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.gallery-page {
+		.content {
+			.photos {
+				.image {
+					height: 250px;
+				}
+			}
+		}
+	}
+
+	.reservations-page {
+		.content {
+			.cards {
+				flex-direction: column;
+
+				.form {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 680px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
+
+	h5 {
+		font-size: 0.8rem;
+	}
+
+	h6 {
+		font-size: 0.6rem;
+	}
+
+	.btn {
+		font-size: 10px;
+	}
+
+	body {
+		overflow-x: hidden;
+		font-size: 13px;
+	}
+
+	header {
+		&,
+		.container {
+			.links {
+				ul {
+					width: 95%;
+				}
+			}
+		}
+	}
+
+	.home-page {
+		.make-reservation {
+			.boxes {
+				div {
+					padding: 1rem 0rem;
+					h6 {
+						font-size: 0.7rem;
+					}
+
+					input[type="date"] {
+						font-size: 0.7rem;
+					}
+
+					select {
+						font-size: 0.7rem;
+					}
+				}
+			}
+		}
+
+		.our-foods {
+			.food-images {
+				.image {
+					height: 200px;
+				}
+			}
+		}
+
+		.our-gallery {
+			.mySwiper {
+				.image {
+					margin: 0 0.2rem;
+					img {
+						height: 200px;
+					}
+				}
+			}
+		}
+	}
+
+	.gallery-page {
+		.content {
+			.photos {
+				.image {
+					height: 200px;
+				}
+			}
+		}
+	}
+
+	.modal {
+		&-content {
+			height: 400px;
+			width: 400px;
+		}
+
+		/* Caption of Modal Image */
+		.caption {
+			font-size: 1rem;
+		}
+
+		/* The Close Button */
+		.close {
+			top: 10px;
+			right: 10px;
+		}
+	}
+
+	form {
+		div {
+			label {
+				font-size: 0.7rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
+
+	h5 {
+		font-size: 0.8rem;
+	}
+
+	h6 {
+		font-size: 0.6rem;
+	}
+
+	.btn {
+		font-size: 10px;
+	}
+
+	body {
+		overflow-x: hidden;
+		font-size: 13px;
+	}
+
+	.up-icon {
+		background-color: $secondary-color;
+		padding: 0rem;
+		border-radius: $radius;
+		margin-top: 3rem;
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.line-white,
+	.line-primary {
+		width: 90%;
+	}
+
+	header {
+		&,
+		.container {
+			.logo {
+				a {
+					h3 {
+						font-size: 1.2rem;
+					}
+				}
+			}
+			.links {
+				ul {
+					width: 95%;
+				}
+			}
+		}
+	}
+
+	.home-page {
+		.showcase {
+			img {
+				height: 50vh;
+			}
+		}
+
+		.make-reservation {
+			.container {
+				width: 100%;
+			}
+			.boxes {
+				div {
+					padding: 1rem 0rem;
+					h6 {
+						font-size: 0.7rem;
+					}
+
+					input[type="date"] {
+						font-size: 0.7rem;
+					}
+
+					select {
+						font-size: 0.7rem;
+					}
+				}
+			}
+		}
+
+		.our-foods {
+			.food-images {
+				grid-template-columns: repeat(2, 1fr);
+				.image {
+					height: 200px;
+				}
+			}
+		}
+
+		.our-gallery {
+			.mySwiper {
+				.image {
+					margin: 0 0.2rem;
+					img {
+						height: 200px;
+					}
+				}
+			}
+		}
+
+		.contact-us {
+			.cards {
+				.info {
+					padding: 3rem 2rem;
+
+					.details {
+						div {
+							p {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+
+				.form {
+					padding: 3rem 1rem;
+				}
+			}
+		}
+	}
+
+	.gallery-page {
+		.content {
+			.photos {
+				grid-template-columns: repeat(2, 1fr);
+
+				.image {
+					height: 200px;
+				}
+			}
+		}
+	}
+
+	.contact-page {
+		.content {
+			.cards {
+				.info {
+					padding: 3rem 2rem;
+
+					.details {
+						div {
+							p {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+
+				.form {
+					padding: 3rem 1rem;
+				}
+			}
+		}
+	}
+
+	.reservations-page {
+		.content {
+			.cards {
+				.info {
+					padding: 3rem 2rem;
+
+					.details {
+						div {
+							p {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+
+				.form {
+					padding: 3rem 1rem;
+					form {
+						select {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modal {
+		&-content {
+			height: 400px;
+			width: 400px;
+		}
+
+		/* Caption of Modal Image */
+		.caption {
+			font-size: 1rem;
+		}
+
+		/* The Close Button */
+		.close {
+			top: 10px;
+			right: 10px;
+		}
+	}
+
+	form {
+		div {
+			label {
+				font-size: 0.7rem;
 			}
 		}
 	}

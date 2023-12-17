@@ -43,6 +43,7 @@
 					margin-bottom: 1rem;
 					font-size: 0.8rem;
 					text-transform: uppercase;
+					text-align: center;
 				}
 
 				input[type="date"] {
@@ -152,10 +153,7 @@
 		.food-images {
 			margin-top: 4rem;
 			display: grid;
-			grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(
-					200px,
-					1fr
-				);
+			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 1rem;
 
 			.image {

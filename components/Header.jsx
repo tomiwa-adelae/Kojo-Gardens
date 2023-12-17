@@ -29,7 +29,7 @@ const Header = () => {
 		<header>
 			<div className="container">
 				<div className="logo">
-					<Link href="/">
+					<Link onClick={() => setOpenNav(false)} href="/">
 						<h3>Kojo Gardens</h3>
 					</Link>
 				</div>

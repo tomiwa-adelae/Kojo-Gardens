@@ -6,10 +6,9 @@ import { v4 as uuidv4 } from "uuid";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Showcase = () => {
 	const images = [
@@ -26,8 +25,7 @@ const Showcase = () => {
 					delay: 5000,
 					disableOnInteraction: false,
 				}}
-				navigation={true}
-				modules={[Autoplay, Pagination, Navigation]}
+				modules={[Autoplay, Pagination]}
 				className="mySwiper"
 			>
 				{images.map((image) => (
