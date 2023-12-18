@@ -12,7 +12,11 @@ const Footer = () => {
 					</Link>
 				</h3>
 				<div className="icons">
-					<a href="/">
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://www.instagram.com/kojo_gardens/"
+					>
 						<FaInstagram className="instagram" />
 					</a>
 					<a href="/">

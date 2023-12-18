@@ -12,8 +12,12 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 const Showcase = () => {
 	const images = [
+		{ id: uuidv4(), url: "./reserved-2.jpg" },
 		{ id: uuidv4(), url: "./hotelbed.jpg" },
-		{ id: uuidv4(), url: "./hotelbed-2.jpg" },
+		{ id: uuidv4(), url: "./reserved.jpg" },
+		{ id: uuidv4(), url: "./hotel-bed-2.jpg" },
+		{ id: uuidv4(), url: "./bags.jpg" },
+		{ id: uuidv4(), url: "./hotel-bed-3.jpg" },
 	];
 
 	return (

@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { server } from "@/config/server";
 
 const Content = () => {
 	const router = useRouter();
@@ -30,7 +31,7 @@ const Content = () => {
 		};
 
 		try {
-			await axios.post("http://localhost:5000/contact", content, config);
+			await axios.post(`${server}/contact`, content, config);
 
 			router.push("/success");
 			setLoading(false);
@@ -113,11 +114,27 @@ const Content = () => {
 							</div>
 							<div>
 								<h6>Phone</h6>
-								<p>+234 1 2772700-25 , +234 1 460610</p>
+								<p>
+									<a href="tel:+234 802 3194 868">
+										+234 802 3194 868
+									</a>
+									,{" "}
+									<a href="tel:+234 703 4006 454">
+										+234 703 4006 454
+									</a>
+								</p>
 							</div>
 							<div>
 								<h6>E-mail</h6>
-								<p>kojogardens@gmail.com</p>
+								<p>
+									<a
+										target="_blank"
+										rel="noopener noreferrer"
+										href="mailto:kojogardens@gmail.com"
+									>
+										kojogardens@gmail.com
+									</a>
+								</p>
 							</div>
 						</div>
 					</div>

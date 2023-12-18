@@ -280,6 +280,14 @@
 						p {
 							font-size: 14px;
 							margin: 0.5rem 0;
+
+							a {
+								@include easeOut();
+
+								&:hover {
+									color: $primary-color;
+								}
+							}
 						}
 					}
 				}

@@ -1,3 +1,4 @@
+import { server } from "@/config/server";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -45,11 +46,7 @@ const Content = ({ searchParams }) => {
 		};
 
 		try {
-			await axios.post(
-				"http://localhost:5000/reservations",
-				content,
-				config
-			);
+			await axios.post(`${server}/reservations`, content, config);
 
 			router.push("/success");
 			setLoading(false);

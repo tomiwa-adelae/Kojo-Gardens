@@ -13,7 +13,15 @@ import { Autoplay, Pagination } from "swiper/modules";
 const Showcase = () => {
 	const images = [
 		{ id: uuidv4(), url: "./hotelbed.jpg" },
-		{ id: uuidv4(), url: "./hotelbed-2.jpg" },
+		{ id: uuidv4(), url: "./hotel-bed-3.jpg" },
+		{ id: uuidv4(), url: "./bar.jpg" },
+		{ id: uuidv4(), url: "./bar-3.jpg" },
+		{ id: uuidv4(), url: "./bar-2.jpg" },
+		{ id: uuidv4(), url: "./beach.jpg" },
+		{ id: uuidv4(), url: "./pool.jpg" },
+		{ id: uuidv4(), url: "./drink.jpg" },
+		{ id: uuidv4(), url: "./heinkein.jpg" },
+		{ id: uuidv4(), url: "./hotel-bed-2.jpg" },
 	];
 
 	return (
