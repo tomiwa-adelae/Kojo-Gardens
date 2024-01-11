@@ -23,7 +23,7 @@ const Footer = () => {
 						<FaFacebook className="facebook" />
 					</a>
 				</div>
-				<p>&copy; 2023 Kojo Gardens. All Rights Reserved</p>
+				<p>&copy; 2024 Kojo Gardens. All Rights Reserved</p>
 			</div>
 		</footer>
 	);
